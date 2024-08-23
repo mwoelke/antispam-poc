@@ -1,0 +1,10 @@
+services:
+  webserver:
+    build: .
+    #image: webdevops/php-nginx:8.2-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+    environment:
+      WEB_DOCUMENT_ROOT: /app
